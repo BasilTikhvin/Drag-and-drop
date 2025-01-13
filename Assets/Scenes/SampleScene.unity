@@ -976,7 +976,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 290e8f10e39a74542a172610192fd5f3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _draggingOffset: 5
+  _draggingOffset: 6
   _scrollSpeed: 20
   _leftBorder: {fileID: 809205395}
   _rightBorder: {fileID: 2032350626}
