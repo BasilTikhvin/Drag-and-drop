@@ -23,17 +23,14 @@ namespace Dragndrop
             Interactable.OnDragging -= OnDragging;
         }
 
-        // Метод для передвижения по сцене через перетаскивание
         public void OnDrag(PointerEventData eventData)
         {
             Vector3 position = _cameraTransform.position;
             position -= new Vector3(eventData.delta.normalized.x * _scrollSpeed * Time.deltaTime, 0f);
-            // Ограничиваем передвижение по сцене
             position.x = Mathf.Clamp(position.x, _leftBorder.position.x, _rightBorder.position.x);
             _cameraTransform.position = position;
         }
 
-        // Метод для передвижения по сцене, если в руках есть предмет
         private void OnDragging(float dragPos)
         {
             if (_cameraTransform.position.x + _draggingOffset < dragPos)
